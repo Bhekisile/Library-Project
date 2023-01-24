@@ -29,6 +29,10 @@ function displayBook() {
     })
 }
 
+function showForm() {
+  document.getElementById('newBook').style.display = 'block';
+}
+
 /*function intakeFormData() {
   let title = document.getElementsByName("title").value;
   let author = document.getElementsByName("author").value;
