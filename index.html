@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,30 @@
     <title>Library Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <button class="newBook" onclick="showForm()">Add New Book</button>
-    <form id="newBook" style="display: none;">
-        <label for="author">Author:</label>
-        <input type="text" name="author" class="author" autocomplete="off"> 
-        <label for="title">Title:</label>
-        <input type="text" name="title" class="title" autocomplete="off">
-        <label for="pages">Pages:</label>
-        <input type="text" name="pages" class="pages" autocomplete="off">
-        <label for="read">Read:</label>
-        <input type="text" name="read" class="read" autocomplete="off">
-    </form>
-    <button type="submit" onclick="addBookToLibrary()">Submit</button>
-    
+    <button class="newBook btn" onclick="showForm()">Add New Book</button>
+        <div class="container">
+            <form id="newBook" style="display: none;">
+                <div class="grid-container">
+                    <div class="grid-left">
+                        <label for="title">Title:</label>
+                        <label for="author">Author:</label>
+                        <label for="pages">Pages:</label>
+                        <label for="read">Read:</label>
+                    </div>
+                    <div class="grid-right">
+                        <input type="text" name="title" class="title">
+                        <input type="text" name="author" class="author">
+                        <input type="text" name="pages" class="pages">
+                        <input type="text" name="read" class="read">
+                    </div>
+                </div>
+                <button type="submit" class="second btn" onclick="intakeFormData()">Submit</button>
+            </form>
+        </div>
     <div class="books"></div>
     <script src="main.js"></script>
 </body>
+
 </html>

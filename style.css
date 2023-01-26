@@ -1,4 +1,61 @@
+.container {
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.grid-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+input {
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
 .card {
-    border: 1px solid grey;
+    border: 3px solid grey;
     width: 200px;
+    font-size: 18px;
+    background-color: cyan;
+}
+
+.btn {
+    box-sizing: border-box;
+    width: 150px;
+    height: 30px;
+    background-color: aqua;
+    border-radius: 8px;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+}
+
+.second {
+    background-color: royalblue;
+    margin-top: 20px;
+}
+
+.books {
+    width: 250px;
+    height: 100%;
 }
