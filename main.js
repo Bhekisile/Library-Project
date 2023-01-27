@@ -31,25 +31,27 @@ function displayBook() {
       for (let key in myLibrary) {
         console.log(key + ":" + myLibrary[key]);
         const para = document.createElement('p');
-        para.innerText = (key + ":" + myLibrary[key]);
+        para.textContent = (key + ":" + myLibrary[key]);
         card.appendChild(para);
     }
-    })
     const button = document.createElement('button');
     const text = document.createTextNode('Remove book');
     button.classList = "second btn";
     button.appendChild(text);
-    books.appendChild(button);
-    button.onclick = removeBook(Book);
-    /*addEventListener('click', event => {
+    card.appendChild(button);
+    button.addEventListener('click', event => {
       event.target.parentNode.remove();
       myLibrary = myLibrary.filter(v => v[1] !== event.target);
-    })*/
+    })
+    
+    })
 }
 
-function removeBook(Book) {
-  console.log('Library', myLibrary);
-  myLibrary.pop(Book);
+function removeBook() {
+  button.addEventListener('click', event => {
+    event.target.parentNode.remove();
+    myLibrary = myLibrary.filter(v => v[1] !== event.target);
+  })
   }
 
 function showForm() {
