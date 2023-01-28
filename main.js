@@ -1,16 +1,16 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, status) {
   // the constructor...
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.read = read;
+  this.status = status;
 }
 
-function addBookToLibrary(title, author, pages, read) {
+function addBookToLibrary(title, author, pages, status) {
   // do stuff here
-  let book = new Book(title, author, pages, read);
+  let book = new Book(title, author, pages, status);
   myLibrary.push(book);
   displayBook();
 }
@@ -47,13 +47,6 @@ function displayBook() {
     })
 }
 
-function removeBook() {
-  button.addEventListener('click', event => {
-    event.target.parentNode.remove();
-    myLibrary = myLibrary.filter(v => v[1] !== event.target);
-  })
-  }
-
 function showForm() {
   document.getElementById('newBook').style.display = 'block';
 }
@@ -62,12 +55,12 @@ function intakeFormData() {
   let title = document.querySelector(".title").value;
   let author = document.querySelector(".author").value;
   let pages = document.querySelector(".pages").value;
-  let read = document.querySelector(".read").value;
+  let status = document.querySelector(".status").value;
 
-  if ((title === "") || (author === "") || (pages === "") || (read === "")){
+  if ((title === "") || (author === "") || (pages === "") || (status === "")){
     return;
   }
-  addBookToLibrary(title, author, pages, read);
+  addBookToLibrary(title, author, pages, status);
   document.getElementById("newBook").reset();
 }
 
@@ -83,3 +76,11 @@ function(event) {
   console.log(event);
   event.preventDefault();
 });
+
+/*Book.prototype.toggleStatus = function() {
+  if (this.status === 'yes') {
+    this.status = 'no';
+  } else {
+    this.status = 'yes';
+  }
+}*/
