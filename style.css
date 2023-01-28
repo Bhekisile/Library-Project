@@ -59,3 +59,7 @@ input {
     width: 250px;
     height: 100%;
 }
+
+.status:hover {
+    background-color: aquamarine;
+}

@@ -5,7 +5,7 @@ function Book(title, author, pages, status) {
   this.title = title;
   this.author = author;
   this.pages = pages;
-  this.status = status;
+  this.status = status
 }
 
 function addBookToLibrary(title, author, pages, status) {
@@ -64,23 +64,23 @@ function intakeFormData() {
   document.getElementById("newBook").reset();
 }
 
-/*addBookToLibrary("The Hobbit", " J.R.R. Tolkien", 250, "Yes");
-addBookToLibrary("Animal Farm", " J.R.R. Tolkien", 500, "Yes");
-addBookToLibrary("Beauty and the Beast", " J.R.R. Tolkien", 700, "Not Yet");
-addBookToLibrary("The Hostage", " J.R.R. Tolkien", 400, "Not yet");
-displayBook();*/
-
-const signupForm = document.querySelector('#newBook');
+/*const signupForm = document.querySelector('#newBook');
 signupForm.addEventListener("submit",
 function(event) {
   console.log(event);
   event.preventDefault();
-});
+});*/
 
-/*Book.prototype.toggleStatus = function() {
-  if (this.status === 'yes') {
-    this.status = 'no';
-  } else {
-    this.status = 'yes';
-  }
-}*/
+function toggleStatus() {
+  const toggle = document.querySelector('.status');
+  toggle.addEventListener('click', () => {
+    if (toggle.value === 'unread') {
+      toggle.value = 'read';
+    } else if (toggle.value === 'read') {
+      toggle.value = 'unread'
+    } 
+  })
+}
+
+/*toggleText = b => b.innerHTML = b.innerHTML == 'read' ? 'unread' : 'read'*/
+
