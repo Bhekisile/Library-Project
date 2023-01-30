@@ -43,7 +43,6 @@ function displayBook() {
       event.target.parentNode.remove();
       myLibrary = myLibrary.filter(v => v[1] !== event.target);
     })
-    
     })
 }
 
@@ -64,23 +63,18 @@ function intakeFormData() {
   document.getElementById("newBook").reset();
 }
 
-/*const signupForm = document.querySelector('#newBook');
+const signupForm = document.querySelector('#newBook');
 signupForm.addEventListener("submit",
 function(event) {
   console.log(event);
   event.preventDefault();
-});*/
+});
 
 function toggleStatus() {
   const toggle = document.querySelector('.status');
-  toggle.addEventListener('click', () => {
     if (toggle.value === 'unread') {
       toggle.value = 'read';
     } else if (toggle.value === 'read') {
       toggle.value = 'unread'
     } 
-  })
 }
-
-/*toggleText = b => b.innerHTML = b.innerHTML == 'read' ? 'unread' : 'read'*/
-
